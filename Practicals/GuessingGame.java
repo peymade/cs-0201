@@ -8,7 +8,7 @@ public class GuessingGame {
   private static final int LOW = 0;
 
   // Set number of guesses to 0 to start the program
-  int guesses = 0;
+  private static int guesses = 0;
 
   public static void main(String[] args) {
 
@@ -24,6 +24,7 @@ public class GuessingGame {
 
     while (guess != secretNum) {
       System.out.println("What is your guess?");
+      guesses += 1;
 
       if (!scanner.hasNextInt()) {
         String whatYouSaid = scanner.nextLine().trim();
@@ -40,15 +41,15 @@ public class GuessingGame {
       }
       if (guess > secretNum) {
         System.out.println("That guess is out of range.");
-        System.out.println("Your guess of " + guess + "is too high.");
+        System.out.println("Your guess of " + guess + " is too high.");
       } else if (guess < secretNum) {
         System.out.println("That guess is out of range.");
         System.out.println("Your guess of " + guess + " is too low.");
       }
     }
 
-    System.out.println("Yay.");
-    System.out.println("Thanks.");
+    System.out.println("Yay! " + guess + " is correct.");
+    System.out.println("It took you " + guesses + " guesses to get the correct number. That's pretty impressive.");
 
     scanner.close();
   }
