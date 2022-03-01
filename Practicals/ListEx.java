@@ -3,6 +3,12 @@ import java.util.*;
 public class ListEx {
 
   public static void main(String[] args) {
+
+    List<Integer> xs = List.of(7, 3, 11);
+    System.out.println(xs);
+    xs.add(4);
+    System.out.println(xs);
+
     List<String> songs = new ArrayList<>();
     songs.add("hi");
     songs.add("there");
@@ -20,7 +26,7 @@ public class ListEx {
 
     Character.isDigit('&');
 
-    List<Integer> xs = new ArrayList<>();
+    List<Integer> welp = new ArrayList<>();
 
     xs.add(7);
     xs.add(3);
