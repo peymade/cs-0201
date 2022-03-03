@@ -1,9 +1,9 @@
 
 // Some example code from class. Lightly modified.
+// By using interfaces, you can categorize different things, then refer to them under one umbrella. 
+// This code checks to see if something is an 'Animal' and if it is, prints what it 'says.'
 
 import java.util.List;
-
-import javax.xml.catalog.CatalogException;
 
 class AnimalInterface {
 
